@@ -15,6 +15,14 @@
       "status": "nuevo",
       "priority": "medium",
       "assignedUser": null
+    },
+    {
+      "id": "4ff18520-ac5c-431f-9466-c871c71179b8",
+      "title": "Prueba de Gmail",
+      "description": "Verificando que el correo llega a mi bandeja de entrada.",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
     }
   ],
   "notifications": [
@@ -52,6 +60,13 @@
       "message": "Nuevo ticket creado: Prueba Final",
       "status": "pending",
       "ticketId": "e769ec9f-deab-44cc-b5ea-f0a939cb42bf"
+    },
+    {
+      "id": "e55a0e14-4210-450e-9c35-3e2542e9ae34",
+      "type": "email",
+      "message": "Nuevo ticket creado: Prueba de Gmail",
+      "status": "pending",
+      "ticketId": "4ff18520-ac5c-431f-9466-c871c71179b8"
     }
   ]
 }
