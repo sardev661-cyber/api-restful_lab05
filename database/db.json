@@ -1,0 +1,57 @@
+{
+  "tickets": [
+    {
+      "id": "cf8a1d15-a7bc-48b5-9e48-c9410d01aa2f",
+      "title": "Problema con el correo",
+      "description": "Prueba de envío de email",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    },
+    {
+      "id": "e769ec9f-deab-44cc-b5ea-f0a939cb42bf",
+      "title": "Prueba Final",
+      "description": "Verificando que Nodemailer funciona correctamente.",
+      "status": "nuevo",
+      "priority": "medium",
+      "assignedUser": null
+    }
+  ],
+  "notifications": [
+    {
+      "id": "8479778c-dc0c-43d0-a27e-932a60780520",
+      "type": "email",
+      "message": "Nuevo ticket creado: Problema 1",
+      "status": "pending",
+      "ticketId": "6c96791b-531b-42a9-b164-cde0090d7e17"
+    },
+    {
+      "id": "0d13d1b5-1693-44ea-9d55-0f0519e7f9c2",
+      "type": "email",
+      "message": "El ticket 6c96791b-531b-42a9-b164-cde0090d7e17 fue asignado a Carlos V",
+      "status": "pending",
+      "ticketId": "6c96791b-531b-42a9-b164-cde0090d7e17"
+    },
+    {
+      "id": "d3f65ca4-3bfe-4ffb-b972-8c46e2a3c85b",
+      "type": "push",
+      "message": "El ticket 6c96791b-531b-42a9-b164-cde0090d7e17 cambió a asignado",
+      "status": "pending",
+      "ticketId": "6c96791b-531b-42a9-b164-cde0090d7e17"
+    },
+    {
+      "id": "15c679b9-1593-43be-8467-f96448d26eeb",
+      "type": "email",
+      "message": "Nuevo ticket creado: Problema con el correo",
+      "status": "pending",
+      "ticketId": "cf8a1d15-a7bc-48b5-9e48-c9410d01aa2f"
+    },
+    {
+      "id": "ad701ffa-bc3e-42a2-9045-f64dde100daf",
+      "type": "email",
+      "message": "Nuevo ticket creado: Prueba Final",
+      "status": "pending",
+      "ticketId": "e769ec9f-deab-44cc-b5ea-f0a939cb42bf"
+    }
+  ]
+}
