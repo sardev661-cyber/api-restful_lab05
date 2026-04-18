@@ -40,8 +40,24 @@ class TicketService {
     return ticket;
   }
 
-  list() {
-    return this.repo.findAll();
+  list(page, limit) {
+    const tickets = this.repo.findAll();
+    
+    if (page && limit) {
+      const startIndex = (page - 1) * limit;
+      const endIndex = page * limit;
+      return {
+        total: tickets.length,
+        page: parseInt(page),
+        limit: parseInt(limit),
+        data: tickets.slice(startIndex, endIndex)
+      };
+    }
+    
+    return {
+      total: tickets.length,
+      data: tickets
+    };
   }
 
   deleteTicket(id) {
@@ -50,6 +66,10 @@ class TicketService {
       throw new Error("Ticket no encontrado");
     }
     return true;
+  }
+
+  getNotificationsByTicket(ticketId) {
+    return this.notificationService.findByTicketId(ticketId);
   }
 }
 

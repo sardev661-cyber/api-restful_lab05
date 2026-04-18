@@ -21,6 +21,16 @@ app.get("/", (req, res) => {
   res.send("¡Bienvenido a la API RESTful!");
 });
 
+const errorHandler = (err, req, res, next) => {
+  console.error("Error capturado:", err.message);
+  res.status(500).json({
+    error: "Ocurrió un error interno en el servidor",
+    detalle: err.message
+  });
+};
+
+app.use(errorHandler);
+
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);

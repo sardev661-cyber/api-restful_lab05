@@ -17,10 +17,9 @@ class NotificationService {
       ticketId
     };
 
-    // Si el tipo de notificación es "email", enviamos el correo
     if (type == "email") {
       this.emailService.sendEmail({ 
-        to: "cvalerianofya29@gmail.com", // Recuerda cambiar esto por tu correo real si vas a probarlo
+        to: "cvalerianofya29@gmail.com", 
         subject: "API RESTful - Alertas del sistema de Tickets", 
         htmlBody: "<h1>" + message +" </h1>" 
       });
@@ -31,6 +30,11 @@ class NotificationService {
 
   list() {
     return this.repo.findAll();
+  }
+
+  findByTicketId(ticketId) {
+    const allNotifications = this.repo.findAll();
+    return allNotifications.filter(notif => notif.ticketId === ticketId);
   }
 }
 

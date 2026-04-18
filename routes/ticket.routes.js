@@ -8,4 +8,7 @@ router.put("/:id/assign", controller.assign);
 router.put("/:id/status", controller.changeStatus);
 router.delete("/:id", controller.delete);
 
+// Ruta para ver historial de notificaciones por ticket
+router.get("/:id/notifications", controller.getNotifications);
+
 module.exports = router;
